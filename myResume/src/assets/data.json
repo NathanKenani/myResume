@@ -1,0 +1,18 @@
+{
+    "resourceBundles": {
+        "Home Resource Bundle": {
+            "home": "Home"
+        },
+        "Experience Resource Bundle": {
+            "experience": "Experience"
+        },
+        "Contacts Resource Bundle": {
+            "contacts": "Contacts"
+        },
+        "History Resource Bundle": {
+            "history": "History"
+        }
+    },
+    "data":[
+    ]
+} 

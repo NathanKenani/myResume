@@ -1,13 +1,14 @@
 import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
-import { HomeComponent } from './home/home.component';
-import { NavbarComponent } from './navbar/navbar.component';
 import { AppRoutingModule } from './app-routing.module';
-import { ExperienceComponent } from './experience/experience.component';
-import { HistoryComponent } from './history/history.component';
-import { ContactUsComponent } from './contact-us/contact-us.component';
+import { ContactUsComponent } from './components/contact-us/contact-us.component';
 import { RouterModule } from '@angular/router';
+import { ExperienceComponent } from './components/experience/experience.component';
+import { HistoryComponent } from './components/history/history.component';
+import { HomeComponent } from './components/home/home.component';
+import { NavbarComponent } from './components/navbar/navbar.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -22,6 +23,7 @@ import { RouterModule } from '@angular/router';
     BrowserModule,
     AppRoutingModule,
     RouterModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent],
