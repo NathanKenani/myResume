@@ -1,18 +1,18 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule, Routes } from '@angular/router';
-import { HomeComponent } from './home/home.component';
-import { ExperienceComponent } from './experience/experience.component';
-import { HistoryComponent } from './history/history.component';
-import { ContactUsComponent } from './contact-us/contact-us.component';
-import { AppComponent } from './app.component';
+import { ContactUsComponent } from './components/contact-us/contact-us.component';
+import { HomeComponent } from './components/home/home.component';
+import { ExperienceComponent } from './components/experience/experience.component';
+import { HistoryComponent } from './components/history/history.component';
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent },
   { path: 'experience', component: ExperienceComponent },
   { path: 'history', component: HistoryComponent },
   { path: 'contact-us', component: ContactUsComponent },
-  { path: '**', component: AppComponent }
+  { path: '**', redirectTo: 'home', pathMatch: 'full' },
+  { path: '',   redirectTo: 'home', pathMatch: 'full' },
 
 ];
 @NgModule({
