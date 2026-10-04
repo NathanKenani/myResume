@@ -1,0 +1,76 @@
+{
+  "profile": {
+    "name": "Nathan Kenani",
+    "title": "Full Stack Software Engineer",
+    "summary": "Versatile Software Development Engineer committed to consistently finding dynamic solutions for software issues. Polished in finding innovative ways to build scalable, high-availability online systems efficiently. Seven-year background in creating and implementing software systems, currently looking for front-end development job opportunities, especially using Angular framework and Java.",
+    "introduction": "I am an experienced Software Engineer seeking an opportunity at your company. I have a strong track record and am looking forward to bringing my skills and abilities to the team. I am an experienced Software Engineer with demonstrated skills in technical analysis, front-end development, object-oriented programming, and application deployment. I am a dependable asset to the team, always punctual and determined to get the job done. I never waver in my contribution to my team as I am always ready to help out my co-workers to achieve the result. I am a quick study with a dedication to keep learning and improving on what I know. Being highly organized and detail-oriented makes it easier to manage my own time for the success of the team. Please take a look at my enclosed resume for more details about my work experience and qualifications. I'd really like to speak with you more about the position, and I look forward to hearing from you soon.",
+    "contact": {
+      "address": ["1509 Mary Frances Pl", "Raleigh, NC 27606"],
+      "phone": "(984) 304-5856",
+      "email": "nathken91@gmail.com"
+    }
+  },
+  "experience": [
+    {
+      "company": "Fidelity Investments",
+      "location": "Durham, NC",
+      "role": "Software Engineer",
+      "startDate": "Jan 2019",
+      "endDate": "Present",
+      "responsibilities": [
+        "Developed web applications using a variety of engineering languages. Collaborated with cross-functional teams to define features and build powerful and easy-to-use products and customer-facing workflow tools. Wrote, tested, and deployed code, verifying operational and UX integrity for releases.",
+        "Conducted full lifecycle software development from planning to deployment and maintenance.",
+        "Performed regression and performance tests for updated systems. Tackled development tasks based on system requirements and documented approaches.",
+        "Coordinated with project managers to meet development timelines and plan testing.",
+        "Liaised with QA testers to perform testing on various parameters. Reviewed and modified unit and integration tests to improve software quality and reliability.",
+        "Analyzed solutions and coding fixes for software problems.",
+        "Migrated applications from on-premises to the cloud."
+      ]
+    },
+    {
+      "company": "Wells Fargo",
+      "location": "Charlotte",
+      "role": "SharePoint Developer",
+      "startDate": "June 2018",
+      "endDate": "Dec 2018",
+      "responsibilities": [
+        "Created workflows to update list items, retrieve workflow history, and retrieve, delete, and restore versions of list items.",
+        "Provided technical support to end-users and resolved day-to-day issues regarding SharePoint usage.",
+        "Tested and debugged code to locate the exact root cause at code levels."
+      ]
+    }
+  ],
+  "education": [
+    {
+      "institution": "University of North Carolina at Pembroke",
+      "location": "Pembroke, NC",
+      "degree": "Computer Science",
+      "startDate": "Aug 2012",
+      "endDate": "May 2017"
+    }
+  ],
+  "skills": [
+    "Customer-Centric Approach",
+    "Application Lifecycle Management (ALM), Testing and Deployment",
+    "Technical Requirements",
+    "Testing and Debugging",
+    "Front-End Development",
+    "Team Collaboration",
+    "Technical Documentation",
+    "Agile Software Development",
+    "Building Angular components and libraries",
+    "CI/CD pipeline experience",
+    "AWS application deployment",
+    "Spring Boot experience",
+    "Version control systems: Git, GitHub, Jira",
+    "Code Development",
+    "Responsive Web Design",
+    "JavaScript Libraries and Frameworks",
+    "Integrating frontend with backend services",
+    "Utilizing the Angular Signal Store"
+  ],
+  "languages": [
+    { "name": "English", "proficiency": "Professional" },
+    { "name": "Kiswahili", "proficiency": "Professional" }
+  ]
+}

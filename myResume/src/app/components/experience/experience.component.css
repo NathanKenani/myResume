@@ -1,0 +1,16 @@
+:host { display: block; }
+.page { max-width: 900px; margin: 0 auto; padding: 3.5rem 2rem 5rem; color: #202b36; }
+.page-heading { padding-bottom: 2rem; border-bottom: 1px solid #dce3e8; }
+.eyebrow { margin: 0 0 .6rem; color: #477a78; font-size: .78rem; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; }
+h1 { margin: 0; font-size: clamp(2.2rem, 6vw, 3.5rem); letter-spacing: -.04em; }
+.page-heading > p:last-child { margin: .75rem 0 0; color: #66737d; }
+.timeline { padding-top: .5rem; }
+.job { padding: 2rem 0; border-bottom: 1px solid #e1e7ea; }
+.job-heading { display: flex; justify-content: space-between; gap: 1.5rem; }
+h2 { margin: 0; font-size: 1.35rem; }
+.role { margin: .45rem 0 0; color: #477a78; font-weight: 600; }
+.role span { color: #66737d; font-weight: 400; }
+.date { margin: .35rem 0 0; color: #687680; font-size: .9rem; white-space: nowrap; }
+ul { margin: 1.2rem 0 0; padding-left: 1.3rem; color: #52616c; line-height: 1.75; }
+li + li { margin-top: .55rem; }
+@media (max-width: 600px) { .page { padding: 2rem 1.25rem 3rem; } .job-heading { flex-direction: column; gap: .25rem; } }
