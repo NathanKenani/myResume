@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { RouterLink } from '@angular/router';
 import { ContentService } from '../../services/content.service';
 import { ResumeContent } from '../../models/content';
 
@@ -6,7 +7,7 @@ import { ResumeContent } from '../../models/content';
     selector: 'home',
     templateUrl: './home.component.html',
     styleUrls: ['./home.component.css'],
-    standalone: false
+    imports: [RouterLink]
 })
 export class HomeComponent implements OnInit {
   content?: ResumeContent;

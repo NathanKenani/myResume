@@ -1,4 +1,5 @@
-<main class="page" *ngIf="content as resume">
+@if (content; as resume) {
+<main class="page">
   <header class="page-heading">
     <p class="eyebrow">Career</p>
     <h1>Experience</h1>
@@ -6,7 +7,8 @@
   </header>
 
   <section class="timeline" aria-label="Work experience">
-    <article class="job" *ngFor="let job of resume.experience">
+    @for (job of resume.experience; track job.company) {
+    <article class="job">
       <div class="job-heading">
         <div>
           <h2>{{ job.company }}</h2>
@@ -15,8 +17,12 @@
         <p class="date">{{ job.startDate }} – {{ job.endDate }}</p>
       </div>
       <ul>
-        <li *ngFor="let responsibility of job.responsibilities">{{ responsibility }}</li>
+        @for (responsibility of job.responsibilities; track $index) {
+        <li>{{ responsibility }}</li>
+        }
       </ul>
     </article>
+    }
   </section>
 </main>
+}

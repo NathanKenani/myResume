@@ -1,4 +1,5 @@
-<main class="page contact-page" *ngIf="content as resume">
+@if (content; as resume) {
+<main class="page contact-page">
   <header class="page-heading">
     <p class="eyebrow">Get in touch</p>
     <h1>Contact</h1>
@@ -9,9 +10,12 @@
     <h2>{{ resume.profile.name }}</h2>
     <p class="role">{{ resume.profile.title }}</p>
     <address>
-      <p *ngFor="let line of resume.profile.contact.address">{{ line }}</p>
+      @for (line of resume.profile.contact.address; track $index) {
+      <p>{{ line }}</p>
+      }
     </address>
     <a [href]="'tel:' + resume.profile.contact.phone">{{ resume.profile.contact.phone }}</a>
     <a [href]="'mailto:' + resume.profile.contact.email">{{ resume.profile.contact.email }}</a>
   </section>
 </main>
+}
