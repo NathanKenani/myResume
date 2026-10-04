@@ -1,1 +1,34 @@
-<p>history works!</p>
+<main class="page" *ngIf="content as resume">
+  <header class="page-heading">
+    <p class="eyebrow">Background</p>
+    <h1>Education &amp; skills</h1>
+    <p>Education, tools, and strengths built throughout my career.</p>
+  </header>
+
+  <section class="content-section" aria-labelledby="education-heading">
+    <h2 id="education-heading">Education</h2>
+    <article class="education" *ngFor="let school of resume.education">
+      <div>
+        <h3>{{ school.institution }}</h3>
+        <p>{{ school.degree }} · {{ school.location }}</p>
+      </div>
+      <p class="date">{{ school.startDate }} – {{ school.endDate }}</p>
+    </article>
+  </section>
+
+  <section class="content-section" aria-labelledby="skills-heading">
+    <h2 id="skills-heading">Skills</h2>
+    <ul class="skill-list">
+      <li *ngFor="let skill of resume.skills">{{ skill }}</li>
+    </ul>
+  </section>
+
+  <section class="content-section" aria-labelledby="languages-heading">
+    <h2 id="languages-heading">Languages</h2>
+    <ul class="language-list">
+      <li *ngFor="let language of resume.languages">
+        <strong>{{ language.name }}</strong><span>{{ language.proficiency }}</span>
+      </li>
+    </ul>
+  </section>
+</main>

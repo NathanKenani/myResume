@@ -1,1 +1,17 @@
-<p>contact-us works!</p>
+<main class="page contact-page" *ngIf="content as resume">
+  <header class="page-heading">
+    <p class="eyebrow">Get in touch</p>
+    <h1>Contact</h1>
+    <p>Interested in working together? Reach out using the details below.</p>
+  </header>
+
+  <section class="contact-card" aria-label="Contact information">
+    <h2>{{ resume.profile.name }}</h2>
+    <p class="role">{{ resume.profile.title }}</p>
+    <address>
+      <p *ngFor="let line of resume.profile.contact.address">{{ line }}</p>
+    </address>
+    <a [href]="'tel:' + resume.profile.contact.phone">{{ resume.profile.contact.phone }}</a>
+    <a [href]="'mailto:' + resume.profile.contact.email">{{ resume.profile.contact.email }}</a>
+  </section>
+</main>

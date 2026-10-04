@@ -1,1 +1,25 @@
-<p>home works!</p>
+<main class="resume-home" *ngIf="content as resume">
+  <header class="intro">
+    <p class="eyebrow">{{ resume.profile.title }}</p>
+    <h1>{{ resume.profile.name }}</h1>
+    <p class="introduction">{{ resume.profile.introduction }}</p>
+    <p class="summary">{{ resume.profile.summary }}</p>
+    <nav class="section-links" aria-label="Resume sections">
+      <a routerLink="/experience">Experience</a>
+      <a routerLink="/history">Education &amp; skills</a>
+      <a routerLink="/contact-us">Contact</a>
+    </nav>
+  </header>
+
+  <section class="resume-section preview" aria-labelledby="recent-experience">
+    <h2 id="recent-experience">Experience</h2>
+    <article class="experience-preview" *ngFor="let job of resume.experience">
+      <div>
+        <h3>{{ job.company }}</h3>
+        <p>{{ job.role }} · {{ job.location }}</p>
+      </div>
+      <p class="date">{{ job.startDate }} – {{ job.endDate }}</p>
+    </article>
+    <a class="text-link" routerLink="/experience">View experience</a>
+  </section>
+</main>

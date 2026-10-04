@@ -1,1 +1,22 @@
-<p>experience works!</p>
+<main class="page" *ngIf="content as resume">
+  <header class="page-heading">
+    <p class="eyebrow">Career</p>
+    <h1>Experience</h1>
+    <p>Software engineering and application development.</p>
+  </header>
+
+  <section class="timeline" aria-label="Work experience">
+    <article class="job" *ngFor="let job of resume.experience">
+      <div class="job-heading">
+        <div>
+          <h2>{{ job.company }}</h2>
+          <p class="role">{{ job.role }} <span>· {{ job.location }}</span></p>
+        </div>
+        <p class="date">{{ job.startDate }} – {{ job.endDate }}</p>
+      </div>
+      <ul>
+        <li *ngFor="let responsibility of job.responsibilities">{{ responsibility }}</li>
+      </ul>
+    </article>
+  </section>
+</main>
