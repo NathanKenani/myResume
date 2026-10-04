@@ -5,8 +5,7 @@ import { ResumeContent } from '../../models/content';
 @Component({
     selector: 'experience',
     templateUrl: './experience.component.html',
-    styleUrls: ['./experience.component.css'],
-    standalone: false
+    styleUrls: ['./experience.component.css']
 })
 export class ExperienceComponent implements OnInit {
   content?: ResumeContent;

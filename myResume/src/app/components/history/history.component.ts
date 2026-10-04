@@ -5,8 +5,7 @@ import { ResumeContent } from '../../models/content';
 @Component({
     selector: 'app-history',
     templateUrl: './history.component.html',
-    styleUrls: ['./history.component.css'],
-    standalone: false
+    styleUrls: ['./history.component.css']
 })
 export class HistoryComponent implements OnInit {
   content?: ResumeContent;
