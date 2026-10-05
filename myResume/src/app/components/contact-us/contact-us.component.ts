@@ -1,19 +1,13 @@
-import { Component, OnInit } from '@angular/core';
-import { ContentService } from '../../services/content.service';
-import { ResumeContent } from '../../models/content';
+import { Component } from '@angular/core';
+import { ResumeStore } from '../../services/resume.store';
 
 @Component({
     selector: 'contact-us',
     templateUrl: './contact-us.component.html',
     styleUrls: ['./contact-us.component.css']
 })
-export class ContactUsComponent implements OnInit {
-  content?: ResumeContent;
+export class ContactUsComponent {
+  readonly content = this.resumeStore.content;
 
-  constructor(private contentService: ContentService) { }
-
-  ngOnInit(): void {
-    this.contentService.getContent().subscribe(content => this.content = content);
-  }
-
+  constructor(private readonly resumeStore: ResumeStore) {}
 }

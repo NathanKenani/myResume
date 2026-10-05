@@ -1,19 +1,13 @@
-import { Component, OnInit } from '@angular/core';
-import { ContentService } from '../../services/content.service';
-import { ResumeContent } from '../../models/content';
+import { Component } from '@angular/core';
+import { ResumeStore } from '../../services/resume.store';
 
 @Component({
     selector: 'experience',
     templateUrl: './experience.component.html',
     styleUrls: ['./experience.component.css']
 })
-export class ExperienceComponent implements OnInit {
-  content?: ResumeContent;
+export class ExperienceComponent {
+  readonly content = this.resumeStore.content;
 
-  constructor(private contentService: ContentService) { }
-
-  ngOnInit(): void {
-    this.contentService.getContent().subscribe(content => this.content = content);
-  }
-
+  constructor(private readonly resumeStore: ResumeStore) {}
 }
