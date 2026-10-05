@@ -1,27 +1,50 @@
-# MyResume
+# Nathan Kenani — Resume Website
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.2.9.
+A responsive, single-page application that presents Nathan Kenani’s professional profile, work experience, education, skills, languages, and contact information. The resume content is stored in a JSON asset and loaded by the Angular app, keeping the displayed information separate from the page components.
 
-## Development server
+## Tech stack
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+- **Angular 22** with standalone components and Angular Router
+- **TypeScript 6** and RxJS
+- **Bootstrap 5.1** CSS and JavaScript bundle
+- Component-level CSS and global CSS (no Sass/SCSS)
+- **Karma and Jasmine** for unit testing
+- **Vercel** deployment with an SPA rewrite for Angular routes
 
-## Code scaffolding
+## Pages
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+- `/home` — profile introduction and a summary of recent experience
+- `/experience` — work history and responsibilities
+- `/history` — education, skills, and languages
+- `/contact-us` — address, phone, and email links
 
-## Build
+The root path redirects to `/home`; unknown paths also return to `/home`.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+## Resume content
 
-## Running unit tests
+Update `src/assets/data.json` to change the profile, contact details, experience, education, skills, or languages shown in the app. The content service loads this file at runtime.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## Run locally
 
-## Running end-to-end tests
+From this directory (`myResume`):
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+```bash
+npm install
+npm run dev
+```
 
-## Further help
+The development server is available at `http://localhost:4200/`.
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+## Build and tests
+
+```bash
+npm run build
+npm test
+```
+
+The production build is written to `dist/myResume`.
+
+## Deploy to Vercel
+
+Set the Vercel project’s **Root Directory** to `myResume`. The `vercel.json` file rewrites incoming paths to `/index.html`, allowing Angular Router to handle direct visits and refreshes on app routes.
+
